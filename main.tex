@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+
+\title{Autonomous Surface Inspection and Adaption on a Mobile Robotics Platform}
+\author{Mark Restrepo, Edward Bruce, Ryan Rosenfeld, Will Gerard, Atiena Branch}
+\date{January 2018}
+
+\begin{document}
+
+
+\section{Abstract}
+
+
+% Submission of 200-500 word abstracts for contributed papers not previously published or presented. Abstracts should explicitly address the following:
+
+% The design problem being solved
+% Background/relevant literature
+% Methodological approach developed or adopted
+% Preliminary results and implications
+
+Autonomous mobile robots are currently being explored as solutions to a wide array of problems, from mapping remote locations to planetary exploration. They are capable of operating on a variety of terrains, each of which has its own unique set of properties that will affect how a wheeled robot is able to move over them. Accurate identification of surfaces is therefore necessary in order for such a robot to achieve optimal performance on each of them. Most current solutions to this surface classification problem take a supervised approach. While this approach has been successful, use of supervised learning means that the robot must be trained offline before it can be run, and that it will be unable to adapt to new terrains that were not present in the training data provided. Our approach uses data from a LIDAR sensor, 3D Camera, and IMU to create vectors passed to a modified density-based spatial clustering of applications with noise (DBSCAN) algorithm. This algorithm performs online, unsupervised surface classification, learning new surfaces while discarding outliers to prevent overfitting the data. When the robot detects that it has moved onto a new surface the operation strategy is altered, optimizing speed and turn radius without exceeding a predefined vibration threshold. Early iterations of the algorithm are able to successfully distinguish surfaces from each other and, upon discovering a new surface, perform a test to measure how slippery it is.
+
+\end{document}
